@@ -1,0 +1,92 @@
+D:/brochure/mm/singleCycle/FA32.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/FA32.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module FA32
+
+Top level modules:
+	FA32
+
+} {} {}} D:/brochure/mm/singleCycle/mux21.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/mux21.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module mux322
+
+Top level modules:
+	mux322
+
+} {} {}} D:/brochure/mm/singleCycle/fa.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/fa.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module FA
+
+Top level modules:
+	FA
+
+} {} {}} D:/brochure/mm/singleCycle/mux5.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/mux5.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module mux5
+
+Top level modules:
+	mux5
+
+} {} {}} D:/brochure/mm/singleCycle/test.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/test.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} D:/brochure/mm/singleCycle/instructionMemory.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/instructionMemory.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module instMemory
+
+Top level modules:
+	instMemory
+
+} {} {}} D:/brochure/mm/singleCycle/registerFile.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/registerFile.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module regFile
+
+Top level modules:
+	regFile
+
+} {} {}} D:/brochure/mm/singleCycle/mux32.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/mux32.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module mux32
+
+Top level modules:
+	mux32
+
+} {} {}} D:/brochure/mm/singleCycle/sub32.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/sub32.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module sub32
+
+Top level modules:
+	sub32
+
+} {} {}} D:/brochure/mm/singleCycle/singleCycle.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/singleCycle.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module singleCycle
+
+Top level modules:
+	singleCycle
+
+} {} {}} D:/brochure/mm/singleCycle/ALU.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/ALU.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} D:/brochure/mm/singleCycle/PC.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/PC.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module pc
+
+Top level modules:
+	pc
+
+} {} {}} D:/brochure/mm/singleCycle/dataMemory.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/dataMemory.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module dataMemory
+
+Top level modules:
+	dataMemory
+
+} {} {}}
