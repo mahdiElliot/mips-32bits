@@ -1,5 +1,5 @@
 module ID_EXE(clock,pc,readData1,readData2,sign_extended,instruction1,instruction2,WB,MEM,EXE,
-pcOut,readData1Out,readData2Out,sign_extendedOut,instruction1Out,instruction2Out,WBOut,MEMOut,EXEOut);
+pcOut ,readData1Out,readData2Out,sign_extendedOut,instruction1Out,instruction2Out,WBOut,MEMOut,EXEOut);
 
     input clock;
     input [31:0] pc;
@@ -9,7 +9,7 @@ pcOut,readData1Out,readData2Out,sign_extendedOut,instruction1Out,instruction2Out
     input [2:0] MEM;
     input [3:0] EXE;
 
-    output reg [31:0] pcOut;
+    output reg [31:0] pcOut ;
     output reg [31:0] readData1Out,readData2Out,sign_extendedOut;
     output reg [4:0] instruction1Out,instruction2Out;
     output reg [1:0] WBOut;
@@ -18,15 +18,15 @@ pcOut,readData1Out,readData2Out,sign_extendedOut,instruction1Out,instruction2Out
 
     always @(posedge clock)
     begin
-        pcOut=pc;
-        readData1Out=readData1;
-        readData2Out=readData2;
-        sign_extendedOut=sign_extended;
-        instruction1Out=instruction1;
-        instruction2Out=instruction2;
-        WBOut=WB;
-        MEMOut=MEM;
-        EXEOut=EXE;
+        assign pcOut=pc;
+        assign readData1Out=readData1;
+        assign readData2Out=readData2;
+        assign sign_extendedOut=sign_extended;
+        assign instruction1Out=instruction1;
+        assign instruction2Out=instruction2;
+        assign WBOut=WB;
+        assign MEMOut=MEM;
+        assign EXEOut=EXE;
     end
 
 endmodule

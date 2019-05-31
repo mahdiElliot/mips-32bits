@@ -96,18 +96,18 @@ Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 Top level modules:
 	IF_ID
 
-} {} {}} D:/brochure/mm/singleCycle/PC.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/PC.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module PC
-
-Top level modules:
-	PC
-
 } {} {}} D:/brochure/mm/singleCycle/dataMemory.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/dataMemory.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 -- Compiling module dataMemory
 
 Top level modules:
 	dataMemory
+
+} {} {}} D:/brochure/mm/singleCycle/PC.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/PC.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module PC
+
+Top level modules:
+	PC
 
 } {} {}}

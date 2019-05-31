@@ -21,7 +21,9 @@ module singleCycle(reset, clock);
     wire [2:0] MEMOut;
     wire [3:0] EXEOut;
     
-    wire [31:0] result2Out, resultOut, readData2Out_2, writeRegMuxRegOut;
+    wire [31:0] result2Out, resultOut, readData2Out_2;
+    wire [4:0]  writeRegMuxRegOut;
+    wire [4:0] writeReg;
     wire zeroOut;
     wire [1:0] WBOut_2;
     wire [2:0] MEMOut_2;
@@ -51,6 +53,7 @@ module singleCycle(reset, clock);
     mux32 mux4(pc_next, result2Out, pc, PCSrc);
     PC Pc(clock, reset, pc, out);
     instMemory memory(out, instruction);
+    
 
     IF_ID if_id(clock,instruction,pc_next,instructionOut,pc_next_out);
     
@@ -198,10 +201,10 @@ module singleCycle(reset, clock);
     mux32 mux2(readData2Out, extendedOut, aluMuxOut, EXEOut[0]);
     ALU alu(readData1, aluMuxOut, EXEOut[1], EXEOut[2], result, zero);
 
-    mux5 mux1(instructionOut[20 : 16], instructionOut[15 : 11], writeRegMux, EXEOut[3]);
+    mux5 mux1(instruction1Out, instruction2Out, writeRegMux, EXEOut[3]);
 
     EXE_MEM exe_mem(clock, result2, result, zero, readData2Out, writeRegMux, WBOut, MEMOut,
-    resut2Out, resultOut, zeroOut, readData2Out_2, writeRegMuxRegOut, WBOut_2, MEMOut_2);
+    result2Out, resultOut, zeroOut, readData2Out_2, writeRegMuxRegOut, WBOut_2, MEMOut_2);
 
      and(PCSrc, zeroOut, MEMOut_2[2]);
 
