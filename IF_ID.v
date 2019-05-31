@@ -2,10 +2,10 @@ module IF_ID(clock,instruction,pc,instructionOut,pcOut);
 
     input clock;
     input [31:0] instruction;
-    input [6:0]  pc;
+    input [31:0]  pc;
 
     output reg [31:0] instructionOut;
-    output reg [6:0] pcOut;
+    output reg [31:0] pcOut;
 
     always @(posedge clock)
     begin

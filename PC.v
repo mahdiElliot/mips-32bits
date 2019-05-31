@@ -1,7 +1,7 @@
-module pc(clock, reset, pc, pc_next);
+module PC(clock, reset, pc, pc_next);
     input clock, reset;
-    input  [6:0] pc;
-    output reg [6:0] pc_next;
+    input  [31:0] pc;
+    output reg [31:0] pc_next;
     
     
     always @(posedge clock)
