@@ -201,7 +201,7 @@ module singleCycle(reset, clock);
     assign result2 = shifted + pc_next_out_2;
     
     mux32 mux2(readData2Out, extendedOut, aluMuxOut, EXEOut[0]);
-    ALU alu(readData1, aluMuxOut, EXEOut[1], EXEOut[2], result, zero);
+    ALU alu(readData1Out, aluMuxOut, EXEOut[1], EXEOut[2], result, zero);
 
     mux5 mux1(instruction1Out, instruction2Out, writeRegMux, EXEOut[3]);
 

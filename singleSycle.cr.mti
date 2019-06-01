@@ -33,27 +33,6 @@ Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 Top level modules:
 	test
 
-} {} {}} D:/brochure/mm/singleCycle/instructionMemory.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/instructionMemory.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module instMemory
-
-Top level modules:
-	instMemory
-
-} {} {}} D:/brochure/mm/singleCycle/ID_EXE.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/ID_EXE.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module ID_EXE
-
-Top level modules:
-	ID_EXE
-
-} {} {}} D:/brochure/mm/singleCycle/MEM_WB.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/MEM_WB.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module MEM_WB
-
-Top level modules:
-	MEM_WB
-
 } {} {}} D:/brochure/mm/singleCycle/mux32.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/mux32.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 -- Compiling module mux32
@@ -68,33 +47,12 @@ Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 Top level modules:
 	sub32
 
-} {} {}} D:/brochure/mm/singleCycle/EXE_MEM.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/EXE_MEM.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module EXE_MEM
-
-Top level modules:
-	EXE_MEM
-
 } {} {}} D:/brochure/mm/singleCycle/ALU.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/ALU.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 -- Compiling module ALU
 
 Top level modules:
 	ALU
-
-} {} {}} D:/brochure/mm/singleCycle/IF_ID.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/IF_ID.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module IF_ID
-
-Top level modules:
-	IF_ID
-
-} {} {}} D:/brochure/mm/singleCycle/PC.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/PC.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module PC
-
-Top level modules:
-	PC
 
 } {} {}} D:/brochure/mm/singleCycle/dataMemory.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/dataMemory.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
