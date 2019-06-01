@@ -60,111 +60,113 @@ module singleCycle(reset, clock);
     //controller
     always @*
     begin
-        if(instructionOut[31:26] == 6'b000000)
+    if(instructionOut[31:0]==32'b0) //nop
         begin
-            if(instructionOut[5:0] == 6'b100000) //add
+                 aluOp1   = 0;
+                 aluOp2   = 0;
+                 branch   = 0;
+                 regDst   = 0;
+                 regWrite = 0;
+                 aluSrc   = 0;
+                 memRead  = 0;
+                 memWrite = 0;
+                 memToReg = 0;
+        end
+        else if(instructionOut[31:0]!=32'b0)
+        begin
+            if(instructionOut[31:26] == 6'b000000)
             begin
-                assign aluOp1   = 0;
-                assign aluOp2   = 0;
-                assign branch   = 0;
-                assign regDst   = 1;
-                assign regWrite = 1;
-                assign aluSrc   = 0;
-                assign memToReg = 0;
-                assign memRead  = 0;
-                assign memWrite = 0;
-            end
+                if(instructionOut[5:0] == 6'b100000) //add
+                begin
+                     aluOp1   = 0;
+                     aluOp2   = 0;
+                     branch   = 0;
+                     regDst   = 1;
+                     regWrite = 1;
+                     aluSrc   = 0;
+                     memToReg = 0;
+                     memRead  = 0;
+                     memWrite = 0;
+                end
             else 
                 if(instructionOut[5:0] == 6'b100010) //sub
                 begin
-                    assign aluOp1   = 0;
-                    assign aluOp2   = 1;
-                    assign branch   = 0;
-                    assign regDst   = 1;
-                    assign regWrite = 1;
-                    assign aluSrc   = 0;
-                    assign memToReg = 0;
-                    assign memRead  = 0;
-                    assign memWrite = 0;
+                     aluOp1   = 0;
+                     aluOp2   = 1;
+                     branch   = 0;
+                     regDst   = 1;
+                     regWrite = 1;
+                     aluSrc   = 0;
+                     memToReg = 0;
+                     memRead  = 0;
+                     memWrite = 0;
                 end
             else
                 if(instructionOut[5:0] == 6'b100100) //and
                 begin
-                    assign aluOp1   = 1;
-                    assign aluOp2   = 0;
-                    assign branch   = 0;
-                    assign regDst   = 1;
-                    assign regWrite = 1;
-                    assign aluSrc   = 0;
-                    assign memToReg = 0;
-                    assign memRead  = 0;
-                    assign memWrite = 0;
+                     aluOp1   = 1;
+                     aluOp2   = 0;
+                     branch   = 0;
+                     regDst   = 1;
+                     regWrite = 1;
+                     aluSrc   = 0;
+                     memToReg = 0;
+                     memRead  = 0;
+                     memWrite = 0;
                 end
             else
                 if(instructionOut[5:0] == 6'b100101) //or
                 begin
-                    assign aluOp1   = 1;
-                    assign aluOp2   = 1;
-                    assign branch   = 0;
-                    assign regDst   = 1;
-                    assign regWrite = 1;
-                    assign aluSrc   = 0;
-                    assign memToReg = 0;
-                    assign memRead  = 0;
-                    assign memWrite = 0;
+                     aluOp1   = 1;
+                     aluOp2   = 1;
+                     branch   = 0;
+                     regDst   = 1;
+                     regWrite = 1;
+                     aluSrc   = 0;
+                     memToReg = 0;
+                     memRead  = 0;
+                     memWrite = 0;
                 end
-        end
-        else
+            end
+            else
             if(instructionOut[31:26] == 6'b100011) //lw
             begin
-                assign aluOp1   = 0;
-                assign aluOp2   = 0;
-                assign branch   = 0;
-                assign regDst   = 0;
-                assign regWrite = 1;
-                assign aluSrc   = 1;
-                assign memRead  = 1;
-                assign memWrite = 0;
-                assign memToReg = 1;
+                 aluOp1   = 0;
+                 aluOp2   = 0;
+                 branch   = 0;
+                 regDst   = 0;
+                 regWrite = 1;
+                 aluSrc   = 1;
+                 memRead  = 1;
+                 memWrite = 0;
+                 memToReg = 1;
             end
         else
             if(instructionOut[31:26] == 6'b101011) //sw
             begin
-                assign aluOp1   = 0;
-                assign aluOp2   = 0;
-                assign branch   = 0;
-                assign regDst   = 0;
-                assign regWrite = 0;
-                assign aluSrc   = 1;
-                assign memRead  = 0;
-                assign memWrite = 1;
-                assign memToReg = 1;
+                 aluOp1   = 0;
+                 aluOp2   = 0;
+                 branch   = 0;
+                 regDst   = 0;
+                 regWrite = 0;
+                 aluSrc   = 1;
+                 memRead  = 0;
+                 memWrite = 1;
+                 memToReg = 1;
             end
-        
-        else if(instructionOut[31:0]==32'b0) //nop
-        begin
-                assign aluOp1   = 0;
-                assign aluOp2   = 0;
-                assign branch   = 0;
-                assign regDst   = 0;
-                assign regWrite = 0;
-                assign aluSrc   = 0;
-                assign memRead  = 0;
-                assign memWrite = 0;
-                assign memToReg = 0;
-        end
 
         else //beq
         begin
-            assign aluOp1   = 0;
-            assign aluOp2   = 1;
-            assign branch   = 1; //branch
-            assign regDst   = 0;
-            assign regWrite = 0;
-            assign aluSrc   = 0;
-            assign memRead  = 0;
-            assign memWrite = 0;
-            assign memToReg = 0;
+             aluOp1   = 0;
+             aluOp2   = 1;
+             branch   = 1; //branch
+             regDst   = 0;
+             regWrite = 0;
+             aluSrc   = 0;
+             memRead  = 0;
+             memWrite = 0;
+             memToReg = 0;
+        end
         end
         
         WB[1]=regWrite;
@@ -184,7 +186,7 @@ module singleCycle(reset, clock);
     //end of controller
     
   
-    regFile regfile(instructionOut[25 : 21], instructionOut[20 : 16], writeReg, writeData, WBOut_3[1], readData1, readData2);
+    regFile regfile(clock,instructionOut[25 : 21], instructionOut[20 : 16], writeReg, writeData, WBOut_3[1], readData1, readData2);
     
     
     assign extended={16'b0, instructionOut[15 : 0]};

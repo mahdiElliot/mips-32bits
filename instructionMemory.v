@@ -1,5 +1,5 @@
 module instMemory(readAddress, instruction);
-    input  [6:0] readAddress;
+    input  [31:0] readAddress;
     output reg [31:0] instruction;
     
     reg    [7:0]  instructions [0:19];
@@ -25,13 +25,13 @@ module instMemory(readAddress, instruction);
     
         instructions[3] = 8'b00001110;
 
-        instructions[4] = 8'b00000000;
+        /*instructions[4] = 8'b00000000;
 
         instructions[5] = 8'b00000000;
 
         instructions[6] = 8'b00000000;
 
-        instructions[7] = 8'b00000000;
+        instructions[7] = 8'b00000000;*/
     
         /*instructions[4] = 8'b01000001;
     

@@ -9,12 +9,19 @@ module MEM_WB(clock,readData,aluResult,muxInst,WB,readDataOut,aluResultOut,muxIn
     output reg [4:0] muxInstOut;
     output reg [1:0] WBOut;
 
+    /*initial
+    begin
+        readDataOut=32'b0;
+        muxInstOut=4'b0;
+        WBOut=2'b0;
+    end*/
+
     always @(posedge clock)
     begin
-        assign readDataOut=readData;
-        assign aluResultOut=aluResult;
-        assign muxInstOut=muxInst;
-        assign WBOut=WB;
+         readDataOut<=readData;
+         aluResultOut<=aluResult;
+         muxInstOut<=muxInst;
+         WBOut<=WB;
     end
 
 endmodule

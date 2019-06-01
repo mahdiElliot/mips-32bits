@@ -16,15 +16,26 @@ zeroOut,readData2Out,muxInstOut,WBOut,MEMOut);
     output reg [1:0] WBOut;
     output reg [2:0] MEMOut;
 
+    /*initial
+    begin
+        addPcOut=32'b0;
+        aluResultOut=32'b0;
+        readData2Out=32'b0;
+        muxInstOut=4'b0;
+        zeroOut=0;
+        WBOut=2'b0;
+        MEMOut=3'b0;
+    end*/
+
     always @(posedge clock)
     begin
-        assign addPcOut=addPc;
-        assign aluResultOut=aluResult;
-        assign readData2Out=readData2;
-        assign muxInstOut=muxInst;
-        assign zeroOut=zero;
-        assign WBOut=WB;
-        assign MEMOut=MEM;
+         addPcOut<=addPc;
+         aluResultOut<=aluResult;
+         readData2Out<=readData2;
+         muxInstOut<=muxInst;
+         zeroOut<=zero;
+         WBOut<=WB;
+         MEMOut<=MEM;
     end
 
 endmodule

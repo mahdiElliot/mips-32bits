@@ -1,7 +1,8 @@
-module regFile(readReg1, readReg2, writeReg, writeData, regWrite, readData1, readData2);
+module regFile(clock,readReg1, readReg2, writeReg, writeData, regWrite, readData1, readData2);
     input [4:0]  readReg1, readReg2, writeReg;
     input [31:0] writeData;
     input regWrite;
+    input clock;
     
     output [31:0] readData1, readData2;
     
@@ -25,6 +26,11 @@ module regFile(readReg1, readReg2, writeReg, writeData, regWrite, readData1, rea
     begin
         readData1 = fileReg[readReg1];
         readData2 = fileReg[readReg2];
+    end
+
+    always @(negedge clock)
+    begin
+    
         if(regWrite == 1'b1)
         begin
             if(writeReg != 5'b0)
@@ -33,7 +39,9 @@ module regFile(readReg1, readReg2, writeReg, writeData, regWrite, readData1, rea
         else
         begin
         fileReg[5'b0]<=32'b0;
-        $display("b=%1b",regWrite);
         end
+
     end
+
+
 endmodule

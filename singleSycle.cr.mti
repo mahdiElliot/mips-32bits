@@ -12,13 +12,6 @@ Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 Top level modules:
 	mux322
 
-} {} {}} D:/brochure/mm/singleCycle/PipeLine.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/PipeLine.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module singleCycle
-
-Top level modules:
-	singleCycle
-
 } {} {}} D:/brochure/mm/singleCycle/fa.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/fa.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 -- Compiling module FA
@@ -40,12 +33,12 @@ Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 Top level modules:
 	test
 
-} {} {}} D:/brochure/mm/singleCycle/registerFile.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/registerFile.v
+} {} {}} D:/brochure/mm/singleCycle/instructionMemory.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/instructionMemory.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module regFile
+-- Compiling module instMemory
 
 Top level modules:
-	regFile
+	instMemory
 
 } {} {}} D:/brochure/mm/singleCycle/ID_EXE.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/ID_EXE.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
@@ -96,18 +89,18 @@ Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 Top level modules:
 	IF_ID
 
-} {} {}} D:/brochure/mm/singleCycle/dataMemory.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/dataMemory.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module dataMemory
-
-Top level modules:
-	dataMemory
-
 } {} {}} D:/brochure/mm/singleCycle/PC.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/PC.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 -- Compiling module PC
 
 Top level modules:
 	PC
+
+} {} {}} D:/brochure/mm/singleCycle/dataMemory.v {1 {vlog -work work -nocovercells D:/brochure/mm/singleCycle/dataMemory.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module dataMemory
+
+Top level modules:
+	dataMemory
 
 } {} {}}
