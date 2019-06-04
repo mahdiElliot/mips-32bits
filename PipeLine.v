@@ -160,7 +160,6 @@ module singleCycle(reset, clock);
              aluOp1   = 0;
              aluOp2   = 1;
              branch   = 1; //branch
-             regDst   = 0;
              regWrite = 0;
              aluSrc   = 0;
              memRead  = 0;
