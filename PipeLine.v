@@ -62,15 +62,12 @@ module singleCycle(reset, clock);
     begin
     if(instructionOut[31:0]==32'b0) //nop
         begin
-                 aluOp1   = 0;
-                 aluOp2   = 0;
+            
                  branch   = 0;
-                 regDst   = 0;
                  regWrite = 0;
-                 aluSrc   = 0;
                  memRead  = 0;
                  memWrite = 0;
-                 memToReg = 0;
+                
         end
         else if(instructionOut[31:0]!=32'b0)
         begin
