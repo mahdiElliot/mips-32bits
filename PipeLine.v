@@ -152,7 +152,6 @@ module singleCycle(reset, clock);
                  aluSrc   = 1;
                  memRead  = 0;
                  memWrite = 1;
-                 memToReg = 1;
             end
 
         else //beq
@@ -164,7 +163,6 @@ module singleCycle(reset, clock);
              aluSrc   = 0;
              memRead  = 0;
              memWrite = 0;
-             memToReg = 0;
         end
         end
         
