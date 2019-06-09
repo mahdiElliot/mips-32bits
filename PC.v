@@ -6,7 +6,7 @@ module PC(clock, reset, pc, pc_next);
     
     always @(posedge clock)
     begin
-        if(reset==1)
+        if(reset == 1)
             pc_next<=32'b0;
         else
             pc_next<=pc;

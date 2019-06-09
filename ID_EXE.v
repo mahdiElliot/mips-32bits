@@ -18,13 +18,14 @@ pcOut,zeroOut,readData1Out,readData2Out,sign_extendedOut,instruction1Out,instruc
     output reg [3:0] EXEOut;
     output reg zeroOut;
 
-    /*initial
+    initial
     begin
         pcOut=32'b0;
         readData1Out=32'b0;
         readData2Out=32'b0;
         sign_extendedOut=32'b0;
-    end*/
+        zeroOut=0;
+    end
 
     always @(posedge clock)
     begin

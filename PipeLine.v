@@ -49,9 +49,9 @@ module pipeLine(reset, clock);
     wire PCSrc;
     wire zero;
     
-    assign pc_next = out + 4;
-    mux32 mux4(pc_next, result2Out, pc, PCSrc);
+    mux32 mux4(pc_next, result2, pc, PCSrc);
     PC Pc(clock, reset, pc, out);
+    assign pc_next = out + 4;
     instMemory memory(out, instruction);
     
 
@@ -203,10 +203,10 @@ module pipeLine(reset, clock);
 
     mux5 mux1(instruction1Out, instruction2Out, writeRegMux, EXEOut[3]);
 
-    EXE_MEM exe_mem(clock, result2, result, readData2Out, writeRegMux, WBOut, MEMOut,
-    result2Out, resultOut, readData2Out_2, writeRegMuxRegOut, WBOut_2, MEMOut_2);
+    EXE_MEM exe_mem(clock, result, readData2Out, writeRegMux, WBOut, MEMOut,
+    resultOut, readData2Out_2, writeRegMuxRegOut, WBOut_2, MEMOut_2);
 
-    and(PCSrc, zeroOut, MEMOut[2]);
+    and(PCSrc, zeroOut, MEMOut[2]); 
 
     dataMemory dataMem(resultOut, readData2Out_2, MEMOut_2[0], MEMOut_2[1], readData);
 

@@ -1,30 +1,44 @@
-C:/Users/User/Desktop/pipeLine/instructionMemory.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/instructionMemory.v
-Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module instMemory
-
-Top level modules:
-	instMemory
-
-} {} {}} C:/Users/User/Desktop/pipeLine/PC.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/PC.v
+C:/Users/User/Desktop/pipeLine/PC.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/PC.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 -- Compiling module PC
 
 Top level modules:
 	PC
 
-} {} {}} C:/Users/User/Desktop/pipeLine/MEM_WB.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/MEM_WB.v
+} {} {}} C:/Users/User/Desktop/pipeLine/dataMemory.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/dataMemory.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module MEM_WB
+-- Compiling module dataMemory
 
 Top level modules:
-	MEM_WB
+	dataMemory
 
-} {} {}} C:/Users/User/Desktop/pipeLine/IF_ID.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/IF_ID.v
+} {} {}} C:/Users/User/Desktop/pipeLine/instructionMemory.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/instructionMemory.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module IF_ID
+-- Compiling module instMemory
 
 Top level modules:
-	IF_ID
+	instMemory
+
+} {} {}} C:/Users/User/Desktop/pipeLine/PipeLine.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/PipeLine.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module pipeLine
+
+Top level modules:
+	pipeLine
+
+} {} {}} C:/Users/User/Desktop/pipeLine/mux32.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/mux32.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module mux32
+
+Top level modules:
+	mux32
+
+} {} {}} C:/Users/User/Desktop/pipeLine/mux5.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/mux5.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module mux5
+
+Top level modules:
+	mux5
 
 } {} {}} C:/Users/User/Desktop/pipeLine/EXE_MEM.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/EXE_MEM.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
@@ -33,12 +47,12 @@ Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 Top level modules:
 	EXE_MEM
 
-} {} {}} C:/Users/User/Desktop/pipeLine/registerFile.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/registerFile.v
+} {} {}} C:/Users/User/Desktop/pipeLine/test.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/test.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module regFile
+-- Compiling module test
 
 Top level modules:
-	regFile
+	test
 
 } {} {}} C:/Users/User/Desktop/pipeLine/comparer.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/comparer.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
@@ -47,6 +61,27 @@ Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 Top level modules:
 	comparer
 
+} {} {}} C:/Users/User/Desktop/pipeLine/ALU.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/ALU.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/User/Desktop/pipeLine/IF_ID.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/IF_ID.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module IF_ID
+
+Top level modules:
+	IF_ID
+
+} {} {}} C:/Users/User/Desktop/pipeLine/registerFile.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/registerFile.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module regFile
+
+Top level modules:
+	regFile
+
 } {} {}} C:/Users/User/Desktop/pipeLine/ID_EXE.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/ID_EXE.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 -- Compiling module ID_EXE
@@ -54,11 +89,11 @@ Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 Top level modules:
 	ID_EXE
 
-} {} {}} C:/Users/User/Desktop/pipeLine/ALU.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/ALU.v
+} {} {}} C:/Users/User/Desktop/pipeLine/MEM_WB.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/MEM_WB.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
--- Compiling module ALU
+-- Compiling module MEM_WB
 
 Top level modules:
-	ALU
+	MEM_WB
 
 } {} {}}

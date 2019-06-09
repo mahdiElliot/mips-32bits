@@ -6,8 +6,9 @@ module test;
     
     initial
     begin
-        clock = 1;
+        clock = 0;
         reset = 1;
+        #3; clock = 1;
         #15;
         reset = 0;
         forever #15 clock =~clock;
