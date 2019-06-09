@@ -1,4 +1,4 @@
-module singleCycle(reset, clock);
+module pipeLine(reset, clock);
     input reset, clock;
     
     reg regDst;

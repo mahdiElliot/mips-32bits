@@ -2,7 +2,7 @@ module test;
     reg clock;
     reg reset;
     
-    singleCycle SC(reset,clock);
+    pipeLine pl(reset,clock);
     
     initial
     begin

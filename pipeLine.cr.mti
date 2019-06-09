@@ -1,4 +1,11 @@
-C:/Users/User/Desktop/pipeLine/PC.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/PC.v
+C:/Users/User/Desktop/pipeLine/instructionMemory.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/instructionMemory.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module instMemory
+
+Top level modules:
+	instMemory
+
+} {} {}} C:/Users/User/Desktop/pipeLine/PC.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/PC.v
 Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
 -- Compiling module PC
 

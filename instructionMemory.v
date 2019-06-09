@@ -15,8 +15,9 @@ module instMemory(readAddress, instruction);
         //lw  $2,14($0)
         //beq $9,$9,2;
         //add $6,$2,$3;
-        //sub $7,$6,$2;
-        //add $6,$8,$4;
+        //sub $7,$6,$8;
+
+        //add $15,$8,$4;
         instructions[0] = 8'b10001100;
 
         instructions[1] = 8'b00000010;
@@ -24,46 +25,46 @@ module instMemory(readAddress, instruction);
         instructions[2] = 8'b00000000;
     
         instructions[3] = 8'b00001110;
-
-        /*instructions[4] = 8'b00000000;
-
-        instructions[5] = 8'b00000000;
-
-        instructions[6] = 8'b00000000;
-
-        instructions[7] = 8'b00000000;*/
     
-        /*instructions[4] = 8'b01000001;
+        instructions[4] = 8'b01000001;
     
         instructions[5] = 8'b00101001;
     
         instructions[6] = 8'b00000000;
     
         instructions[7] = 8'b00000010;
-    
+
         instructions[8] = 8'b00000000;
-    
-        instructions[9] = 8'b01100010;
-    
-        instructions[10] = 8'b00110000;
-    
-        instructions[11] = 8'b00100000;
-    
+
+        instructions[9] = 8'b00000000;
+
+        instructions[10] = 8'b00000000;
+
+        instructions[11] = 8'b00000000;
+
         instructions[12] = 8'b00000000;
     
-        instructions[13] = 8'b11000010;
+        instructions[13] = 8'b01100010;
     
-        instructions[14] = 8'b00111000;
+        instructions[14] = 8'b00110000;
     
-        instructions[15] = 8'b00100010;
+        instructions[15] = 8'b00100000;
+    
+        instructions[16] = 8'b00000000;
+    
+        instructions[17] = 8'b11001000;
+    
+        instructions[18] = 8'b00111000;
+    
+        instructions[19] = 8'b00100010;
         
-        instructions[16] = 8'b00000001;
+        instructions[20] = 8'b00000001;
         
-        instructions[17] = 8'b00000100;
+        instructions[21] = 8'b00000100;
         
-        instructions[18] = 8'b00110000;
+        instructions[22] = 8'b01111000;
         
-        instructions[19] = 8'b00100000;*/
+        instructions[23] = 8'b00100000;
         
     end
      
