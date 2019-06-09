@@ -1,0 +1,57 @@
+C:/Users/User/Desktop/pipeLine/PC.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/PC.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} C:/Users/User/Desktop/pipeLine/MEM_WB.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/MEM_WB.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module MEM_WB
+
+Top level modules:
+	MEM_WB
+
+} {} {}} C:/Users/User/Desktop/pipeLine/IF_ID.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/IF_ID.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module IF_ID
+
+Top level modules:
+	IF_ID
+
+} {} {}} C:/Users/User/Desktop/pipeLine/EXE_MEM.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/EXE_MEM.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module EXE_MEM
+
+Top level modules:
+	EXE_MEM
+
+} {} {}} C:/Users/User/Desktop/pipeLine/registerFile.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/registerFile.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module regFile
+
+Top level modules:
+	regFile
+
+} {} {}} C:/Users/User/Desktop/pipeLine/comparer.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/comparer.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module comparer
+
+Top level modules:
+	comparer
+
+} {} {}} C:/Users/User/Desktop/pipeLine/ID_EXE.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/ID_EXE.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module ID_EXE
+
+Top level modules:
+	ID_EXE
+
+} {} {}} C:/Users/User/Desktop/pipeLine/ALU.v {1 {vlog -work work -nocovercells C:/Users/User/Desktop/pipeLine/ALU.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}}
