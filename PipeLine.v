@@ -185,27 +185,28 @@ module singleCycle(reset, clock);
   
     regFile regfile(clock,instructionOut[25 : 21], instructionOut[20 : 16], writeReg, writeData, WBOut_3[1], readData1, readData2);
     
+    comparer compare(readData1, readData2, zero);
     
     assign extended={16'b0, instructionOut[15 : 0]};
 
-    ID_EXE id_exe(clock, pc_next_out, readData1,readData2, extended, instructionOut[20 : 16],
-    instructionOut[15:11], WB,MEM,EXE, pc_next_out_2, readData1Out, readData2Out, extendedOut,
+    ID_EXE id_exe(clock, pc_next_out, zero, readData1,readData2, extended, instructionOut[20 : 16],
+    instructionOut[15:11], WB,MEM,EXE, pc_next_out_2, zeroOut, readData1Out, readData2Out, extendedOut,
     instruction1Out, instruction2Out, WBOut, MEMOut, EXEOut);
 
-        ///shift left
+        //shift left
     assign shifted = {extendedOut[29 : 0], 2'b00};
     
     assign result2 = shifted + pc_next_out_2;
     
     mux32 mux2(readData2Out, extendedOut, aluMuxOut, EXEOut[0]);
-    ALU alu(readData1Out, aluMuxOut, EXEOut[1], EXEOut[2], result, zero);
+    ALU alu(readData1Out, aluMuxOut, EXEOut[1], EXEOut[2], result);
 
     mux5 mux1(instruction1Out, instruction2Out, writeRegMux, EXEOut[3]);
 
-    EXE_MEM exe_mem(clock, result2, result, zero, readData2Out, writeRegMux, WBOut, MEMOut,
-    result2Out, resultOut, zeroOut, readData2Out_2, writeRegMuxRegOut, WBOut_2, MEMOut_2);
+    EXE_MEM exe_mem(clock, result2, result, readData2Out, writeRegMux, WBOut, MEMOut,
+    result2Out, resultOut, readData2Out_2, writeRegMuxRegOut, WBOut_2, MEMOut_2);
 
-     and(PCSrc, zeroOut, MEMOut_2[2]);
+     and(PCSrc, zeroOut, MEMOut[2]);
 
     dataMemory dataMem(resultOut, readData2Out_2, MEMOut_2[0], MEMOut_2[1], readData);
 

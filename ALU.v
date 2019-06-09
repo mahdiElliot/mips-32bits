@@ -1,9 +1,8 @@
-module ALU(a, b, aluOp1, aluOp2, result, zero);
+module ALU(a, b, aluOp1, aluOp2, result);
     input  [31:0] a, b;
     output [31:0] result;
     reg    [31:0] result;
     input  aluOp1, aluOp2;
-    output zero;
 
     always @(aluOp1 or aluOp2)
     begin
@@ -19,5 +18,4 @@ module ALU(a, b, aluOp1, aluOp2, result, zero);
                     assign result = a | b;
     end
 
-    assign zero = (result == 32'd0) ? 1'b1: 1'b0; 
 endmodule
