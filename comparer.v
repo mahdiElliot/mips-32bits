@@ -1,13 +1,13 @@
-module comparer(data1 , data2 , zero)
-{
+module comparer(data1 , data2 , zero);
+    
     input [31:0] data1,data2;
     output reg zero;
 
-    always*
+    always @*
     begin
         if(data1 == data2)
             zero = 1;
         else
             zero = 0;
     end
-}
+endmodule
