@@ -206,7 +206,7 @@ module singleCycle(reset, clock);
     EXE_MEM exe_mem(clock, result2, result, readData2Out, writeRegMux, WBOut, MEMOut,
     result2Out, resultOut, readData2Out_2, writeRegMuxRegOut, WBOut_2, MEMOut_2);
 
-     and(PCSrc, zeroOut, MEMOut[2]);
+    and(PCSrc, zeroOut, MEMOut[2]);
 
     dataMemory dataMem(resultOut, readData2Out_2, MEMOut_2[0], MEMOut_2[1], readData);
 
