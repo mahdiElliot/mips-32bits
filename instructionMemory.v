@@ -2,7 +2,7 @@ module instMemory(readAddress, instruction);
     input  [31:0] readAddress;
     output reg [31:0] instruction;
     
-    reg    [7:0]  instructions [0:19];
+    reg    [7:0]  instructions [0:33];
     
     integer i;
     integer j;
@@ -14,6 +14,7 @@ module instMemory(readAddress, instruction);
     begin
         //lw  $2,14($0)
         //beq $9,$9,2;
+        //nop
         //add $6,$2,$3;
         //sub $7,$6,$8;
 

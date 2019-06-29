@@ -14,17 +14,15 @@ module pipeLine(reset, clock);
     reg [2:0] MEM;
     reg [3:0] EXE;
 
-    wire [31:0] pc_next_out_2;
     wire [31:0] readData1Out,readData2Out,extendedOut;
     wire [4:0] instruction1Out,instruction2Out;
     wire [1:0] WBOut;
     wire [2:0] MEMOut;
     wire [3:0] EXEOut;
     
-    wire [31:0] result2Out, resultOut, readData2Out_2;
+    wire [31:0] resultOut, readData2Out_2;
     wire [4:0]  writeRegMuxRegOut;
     wire [4:0] writeReg;
-    wire zeroOut;
     wire [1:0] WBOut_2;
     wire [2:0] MEMOut_2;
 
@@ -189,14 +187,16 @@ module pipeLine(reset, clock);
     
     assign extended={16'b0, instructionOut[15 : 0]};
 
-    ID_EXE id_exe(clock, pc_next_out, zero, readData1,readData2, extended, instructionOut[20 : 16],
-    instructionOut[15:11], WB,MEM,EXE, pc_next_out_2, zeroOut, readData1Out, readData2Out, extendedOut,
-    instruction1Out, instruction2Out, WBOut, MEMOut, EXEOut);
-
         //shift left
-    assign shifted = {extendedOut[29 : 0], 2'b00};
+    assign shifted = {extended[29 : 0], 2'b00};
     
-    assign result2 = shifted + pc_next_out_2;
+    assign result2 = shifted + pc_next_out + 4;
+
+    and(PCSrc, zero, MEM[2]);
+
+    ID_EXE id_exe(clock, readData1,readData2, extended, instructionOut[20 : 16],
+    instructionOut[15:11], WB,MEM,EXE, readData1Out, readData2Out, extendedOut,
+    instruction1Out, instruction2Out, WBOut, MEMOut, EXEOut);
     
     mux32 mux2(readData2Out, extendedOut, aluMuxOut, EXEOut[0]);
     ALU alu(readData1Out, aluMuxOut, EXEOut[1], EXEOut[2], result);
@@ -204,9 +204,7 @@ module pipeLine(reset, clock);
     mux5 mux1(instruction1Out, instruction2Out, writeRegMux, EXEOut[3]);
 
     EXE_MEM exe_mem(clock, result, readData2Out, writeRegMux, WBOut, MEMOut,
-    resultOut, readData2Out_2, writeRegMuxRegOut, WBOut_2, MEMOut_2);
-
-    and(PCSrc, zeroOut, MEMOut[2]); 
+    resultOut, readData2Out_2, writeRegMuxRegOut, WBOut_2, MEMOut_2); 
 
     dataMemory dataMem(resultOut, readData2Out_2, MEMOut_2[0], MEMOut_2[1], readData);
 
