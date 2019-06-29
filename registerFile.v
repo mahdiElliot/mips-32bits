@@ -22,13 +22,13 @@ module regFile(clock,readReg1, readReg2, writeReg, writeData, regWrite, readData
         end
     end
     
-    always @(readReg1 or readReg2 or regWrite or writeReg or writeData)
+    always @(negedge clock)
     begin
         readData1 = fileReg[readReg1];
         readData2 = fileReg[readReg2];
     end
 
-    always @(negedge clock)
+    always @(posedge clock)
     begin
     
         if(regWrite == 1'b1)
